@@ -44,7 +44,7 @@ img {
 /* вторичный цвет фона #F5F4FA */
 /* черный цвет  #000000 */
 
-/* site-nav */
+/* header */
 
 .container {
   margin-left: auto;
@@ -126,6 +126,10 @@ header {
   color: var(--primary-color-link);
 }
 
+.item .link {
+  display: inline-flex;
+}
+
 .auth-nav .link {
   padding-bottom: 32px;
   padding-top: 32px;
@@ -137,15 +141,40 @@ header {
   color: var(--primary-color-link);
 }
 
+.link:hover .icon-tell,
+.link:focus .icon-tell {
+  fill: #2196f3;
+}
+
+.icon-tell {
+  fill: var(--primary-text-color);
+  margin-right: 10px;
+}
+
 .site-nav .current {
   color: var(--primary-color-link);
 }
 
-/* hero */
+/* ------------ MAIN---------- */
+
+/* ------HERO------ */
 
 .hero {
   padding: 200px 0;
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
   background-color: #2f303a;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/hero.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   color: var(--white-color);
   text-align: center;
 }
@@ -179,11 +208,20 @@ header {
   border-radius: 4px;
 }
 
-.button:hover {
+.button:hover .button:focus {
   background-color: #188ce8;
 }
 
-/* section */
+/* ------section------- */
+
+.item .icon {
+  display: block;
+  width: 270px;
+  height: 120px;
+  padding: 25px 100px;
+  background-color: #f5f4fa;
+  border-radius: 4px;
+}
 
 .advantage {
   padding-bottom: 0;
@@ -196,7 +234,6 @@ header {
   margin: -1px;
   border: 0;
   padding: 0;
-
   white-space: nowrap;
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
@@ -225,6 +262,7 @@ header {
 }
 
 .advantage-title {
+  margin-top: 30px;
   margin-bottom: 10px;
   color: var(--title-text-color);
   font-weight: 700;
@@ -243,9 +281,6 @@ header {
 
 .team {
   background-color: #f5f4fa;
-}
-
-.team {
   padding-top: 94px;
   padding-bottom: 94px;
 }
@@ -295,11 +330,75 @@ header {
 }
 
 .position {
-  margin-bottom: 30px;
-
+  margin-bottom: 16px;
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
+}
+
+.social-icon {
+  display: inline-flex;
+  padding: 0 32px 30px 32px;
+}
+
+.social-icon .icons:not(:last-child) {
+  margin-right: 10px;
+}
+
+.icon-soc {
+  width: 44px;
+  height: 44px;
+  padding: 12px;
+  fill: #afb1b8;
+}
+
+.icons .link:hover,
+.icons .link:focus {
+  fill: #ffffff;
+  background-color: #2196f3;
+  border-radius: 50%;
+}
+
+.icons .link:hover .icon-soc,
+.icons .link:focus .icon-soc {
+  fill: #ffffff;
+}
+
+/* company */
+
+.company-block {
+  display: flex;
+}
+
+.company-block .item {
+  padding: 16px 32px;
+}
+
+.company-block .item {
+  width: 170px;
+  height: 92px;
+  cursor: pointer;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+
+.company-block .link {
+  display: block;
+  fill: #afb1b8;
+}
+
+.company-block .link:hover,
+.company-block .link:focus {
+  fill: #2196f3;
+}
+
+.company-block .item:hover,
+.company-block .item:focus {
+  border-color: #2196f3;
+}
+
+.company-block .item:not(:last-child) {
+  margin-right: 30px;
 }
 
 /* карточка работ */
@@ -334,6 +433,11 @@ main {
   margin-top: var(--card-set-gap);
 }
 
+.card-work .item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
 .filter {
   display: flex;
   margin-bottom: 50px;
@@ -359,6 +463,8 @@ main {
 .button-filter:focus {
   color: var(--white-color);
   background-color: var(--primary-color-link);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* footer */
@@ -404,4 +510,58 @@ footer {
 .footer-nav .link:hover,
 .footer-nav .link:focus {
   color: var(--primary-color-link);
+}
+
+/* --footer social link--- */
+
+.social-link {
+  margin-left: 70px;
+  padding-top: 12px;
+}
+
+.social-link-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.footer .container {
+  display: flex;
+}
+.footer-icon {
+  display: inline-flex;
+}
+
+.footer-icon .icons-footer:not(:last-child) {
+  margin-right: 10px;
+}
+.icons-footer .link {
+  display: block;
+  list-style: none;
+  width: 44px;
+  height: 44px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+
+.icon-insta {
+  width: 44px;
+  height: 44px;
+  padding: 12px;
+  fill: #ffffff;
+}
+
+.icons-footer .link:hover,
+.icons-footer .link:focus {
+  background-color: #2196f3;
+  border-radius: 50%;
+}
+
+.icons .link:hover .icon-soc,
+.icons .link:focus .icon-soc {
+  fill: #ffffff;
 }
