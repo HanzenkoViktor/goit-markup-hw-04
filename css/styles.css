@@ -131,8 +131,8 @@ header {
 }
 
 .auth-nav .link {
-  padding-bottom: 32px;
-  padding-top: 32px;
+  display: flex;
+  align-items: center;
   color: var(--primary-text-color);
 }
 
@@ -215,10 +215,11 @@ header {
 /* ------section------- */
 
 .item .icon {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 270px;
   height: 120px;
-  padding: 25px 100px;
   background-color: #f5f4fa;
   border-radius: 4px;
 }
@@ -242,10 +243,6 @@ header {
 
 .advantage-block {
   display: flex;
-}
-
-.advantage-block .item {
-  width: 270px;
 }
 
 .advantage-block .item:not(:last-child) {
@@ -337,18 +334,21 @@ header {
 }
 
 .social-icon {
-  display: inline-flex;
-  padding: 0 32px 30px 32px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
 }
 
 .social-icon .icons:not(:last-child) {
   margin-right: 10px;
 }
 
-.icon-soc {
+.icons .link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 44px;
   height: 44px;
-  padding: 12px;
   fill: #afb1b8;
 }
 
@@ -371,7 +371,9 @@ header {
 }
 
 .company-block .item {
-  padding: 16px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .company-block .item {
@@ -433,7 +435,12 @@ main {
   margin-top: var(--card-set-gap);
 }
 
-.card-work .item:hover {
+.item .card-thumb {
+  display: block;
+}
+
+.item .card-thumb:hover,
+.item .card-thumb:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -516,7 +523,6 @@ footer {
 
 .social-link {
   margin-left: 70px;
-  padding-top: 12px;
 }
 
 .social-link-title {
@@ -531,6 +537,7 @@ footer {
 
 .footer .container {
   display: flex;
+  align-items: baseline;
 }
 .footer-icon {
   display: inline-flex;
@@ -540,8 +547,9 @@ footer {
   margin-right: 10px;
 }
 .icons-footer .link {
-  display: block;
-  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 44px;
   height: 44px;
   background-color: rgba(255, 255, 255, 0.1);
@@ -549,9 +557,6 @@ footer {
 }
 
 .icon-insta {
-  width: 44px;
-  height: 44px;
-  padding: 12px;
   fill: #ffffff;
 }
 
